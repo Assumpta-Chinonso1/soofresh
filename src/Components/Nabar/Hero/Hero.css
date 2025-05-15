@@ -1,0 +1,48 @@
+.Hero{
+    height: 34vw;
+    margin: 30px auto;
+     background-image: url('/src/assets/sofreshbackground.jpeg');
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    
+}
+
+.hero{
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   gap: 1.5vw;
+   max-width: 50%;
+   bottom: 30%;
+   left: 6vw;
+}
+
+.hero h1{
+    font-weight: bolder;
+    font-size: 60px;
+    color: white;
+     animation: slideUp 1.0s ease-out forwards ;
+     transition: transform 1s ease, opacity 1s ease;
+}
+
+.hero span{
+      font-weight: bolder;
+    font-size: 60px;
+    color: white;
+    animation: slideUp 1.05s ease-out forwards ;
+       transition: transform 1.s ease, opacity 1.1s ease;
+}
+
+.hero h1:hover{
+     transform: scale(3.05);
+  opacity: 0.9;
+
+}
+
+.hero span:hover{
+     transform: scale(3.05);
+  opacity: 0.9;
+
+}

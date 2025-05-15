@@ -1,0 +1,58 @@
+.navbar{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    height: 100px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.navbar .logo{
+    width: 10vh;
+    cursor: pointer;
+}
+
+.navbar-menu{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    color: black;
+    padding-right: 200px;
+    font-size: 18px;
+}
+
+.navbar-right{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+
+.navbar .icon{
+    width: 30px;
+    margin-left: 60vh;
+}
+
+.navbar li{
+    cursor: pointer;
+}
+.navbar li:hover{
+    color: rgb(31, 198, 31);
+    transition: 2s;
+}
+
+  .btn{
+background-color: transparent;
+font-size: 20px;
+color: white;
+border: none;
+background-color: orange;
+padding: 10px 20px;
+border-radius: 50px;
+}
+
+.btn:hover{
+    background-color: green;
+    transition: 2s;
+    cursor: pointer;
+}
