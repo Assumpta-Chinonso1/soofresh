@@ -22,7 +22,7 @@ a{
   
 }
 
-@keyframes slideUp{
+@keyframes slideUp {
   0%{
     opacity: 0;
     transform:  translateY(30px);

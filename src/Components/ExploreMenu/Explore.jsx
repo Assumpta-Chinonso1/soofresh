@@ -1,23 +1,32 @@
-// src/components/Explore/Explore.js
-
 import './Explore.css';
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { assets, menu_lists } from '../../assets/assests';
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/solid';
 
 const Explore = () => {
   const ScrollRef = useRef(null);
+  const scrollInterval = useRef(null);
 
   const scroll = (direction) => {
     const container = ScrollRef.current;
     if (container) {
-      const scrollAmount = direction === 'left' ? -200 : 200;
+      const scrollAmount = direction === 'left' ? -300 : 300;
       container.scrollBy({
         left: scrollAmount,
         behavior: 'smooth',
       });
     }
   };
+
+  useEffect(() => {
+    
+    scrollInterval.current = setInterval(() => {
+      scroll('right');
+    }, 1000);
+
+    
+    return () => clearInterval(scrollInterval.current);
+  }, []);
 
   return (
     <div className="exploremenu">
@@ -41,9 +50,8 @@ const Explore = () => {
             <div key={index} className="explore-menu-list">
               <img src={item.menu_image} alt={item.menu_name} />
               <p>{item.menu_name}</p>
-              
               <h2>
-                From  <span className="menu">{item.menu_price}</span>
+                From <span className="menu">{item.menu_price}</span>
               </h2>
             </div>
           ))}
@@ -58,3 +66,4 @@ const Explore = () => {
 };
 
 export default Explore;
+
