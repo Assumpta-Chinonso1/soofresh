@@ -23,7 +23,8 @@
   background: linear-gradient(to right, #f77f00, #fcbf49);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: bolder;
+  font-weight: bold;
+
 }
 
 .menu-label {
