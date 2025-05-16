@@ -1,32 +1,55 @@
 import './Explore.css';
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { assets, menu_lists } from '../../assets/assests';
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/solid';
 
 const Explore = () => {
   const ScrollRef = useRef(null);
   const scrollInterval = useRef(null);
+  const [direction, setDirection] = useState('right');
 
-  const scroll = (direction) => {
+  const ITEM_WIDTH = 250; // adjust based on your card size
+
+  const scroll = (dir) => {
     const container = ScrollRef.current;
-    if (container) {
-      const scrollAmount = direction === 'left' ? -300 : 300;
-      container.scrollBy({
-        left: scrollAmount,
-        behavior: 'smooth',
-      });
+    if (!container) return;
+
+    const newScrollLeft =
+      dir === 'left'
+        ? container.scrollLeft - ITEM_WIDTH
+        : container.scrollLeft + ITEM_WIDTH;
+
+    container.scrollTo({
+      left: newScrollLeft,
+      behavior: 'auto', // INSTANT and FORCEFUL!
+    });
+  };
+
+  const autoScroll = () => {
+    const container = ScrollRef.current;
+    if (!container) return;
+
+    const { scrollLeft, scrollWidth, clientWidth } = container;
+
+    // ⚠️ At right end, reverse direction to left
+    if (scrollLeft + clientWidth >= scrollWidth - ITEM_WIDTH) {
+      setDirection('left');
     }
+    // ⚠️ At left end, reverse direction to right
+    else if (scrollLeft <= 0) {
+      setDirection('right');
+    }
+
+    scroll(direction);
   };
 
   useEffect(() => {
-    
-    scrollInterval.current = setInterval(() => {
-      scroll('right');
-    }, 1000);
+    scrollInterval.current = setInterval(autoScroll, 2000);
 
-    
-    return () => clearInterval(scrollInterval.current);
-  }, []);
+    return () => {
+      clearInterval(scrollInterval.current);
+    };
+  }, [direction]);
 
   return (
     <div className="exploremenu">
@@ -66,4 +89,3 @@ const Explore = () => {
 };
 
 export default Explore;
-
