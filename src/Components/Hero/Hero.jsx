@@ -1,6 +1,6 @@
 import React from 'react'
 import './Hero.css'
-import { assets } from '../../assets/assests'
+
 
 const Hero = () => {
   return (
