@@ -1,8 +1,8 @@
 .exploremenu {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 1rem;
+  gap: 2rem;
+  padding: 1rem 2rem;
   background-color: #fffef9;
   font-family: 'Poppins', sans-serif;
 }
@@ -15,8 +15,8 @@
 
 .exploremenu h1 {
   font-size: 40px;
-  font-weight: bolder;
-  color: rgb(23, 18, 18);
+  font-weight: 800;
+  color: #171212;
 }
 
 .menu-gradient {
@@ -24,7 +24,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
-
 }
 
 .menu-label {
@@ -34,56 +33,80 @@
   color: #f77f00;
   font-weight: 500;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .menu-label:hover {
   color: green;
-  transition: 0.3s;
 }
 
 .menu-arrow {
   width: 20px;
   height: 20px;
+  margin-left: 5px;
 }
 
+
 .explore-menu-lists {
-  display: flex;
-  align-items: center;
   position: relative;
-  margin-top: 1.5rem;
+  width: 100%;
+  overflow: hidden;
+  padding: 2rem 5rem;
+  box-sizing: border-box;
+}
+
+.explore-menu-item {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+  scrollbar-width: none;
+}
+
+.explore-menu-item::-webkit-scrollbar {
+  display: none;
 }
 
 .scroll-arrow-left,
 .scroll-arrow-right {
   position: absolute;
-  top: 30%;
+  top: 50%;
   transform: translateY(-50%);
-  z-index: 10;
-  background-color: #f77f00;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  color: white;
+  z-index: 100;
+  border: 3px solid #f77f00;
+  border-radius: 30px;
+  width: 30px;
+  height: 30px;
+  color: #f77f00;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   
 }
-.scroll-arrow-left:hover,
-.scroll-arrow-right:hover {
-  background-color: #e79e0d;
-  transition: 0.3s;
-}
 
 .scroll-arrow-left {
-  left: -15px;
+  left: 0.5rem;
+
+}
+.scroll-arrow-left:hover {
+  background-color: #f77f00;
+  color: #fff;
+  transition: 1s;
 }
 
 .scroll-arrow-right {
-  right: -15px;
+  right: 0.5rem;
+  
 }
+
+.scroll-arrow-right:hover {
+  background-color: #f77f00;
+  color: #fff;
+  transition: 1s;
+}
+
 
 .arrow-left,
 .arrow-right {
@@ -91,37 +114,27 @@
   height: 20px;
 }
 
-.explore-menu-item {
-  display: flex;
-  gap: 1.2rem;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 1rem 2.5rem;
-  scrollbar-width: none; /* Firefox */
-}
-
-.explore-menu-item::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
-}
 
 .explore-menu-list {
   min-width: 250px;
   background: white;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 1rem;
   text-align: center;
-  transition: 0.3s;
+  transition: transform 0.2s;
 }
 
 .explore-menu-list:hover {
-  transform: translateY(-1px);
+  transform: scale(1.1ms);
+
 }
 
 .explore-menu-list img {
   width: 210px;
   height: 210px;
-  border-radius: 5px;
-  transition: transform 0.2s;
+  border-radius: 8px;
+  transition: transform 1s;
+  object-fit: cover;
 }
 
 .explore-menu-list img:hover {
@@ -129,27 +142,25 @@
 }
 
 .explore-menu-list p {
-  font-weight: bold;
+  font-weight: 600;
   margin-top: 1.2rem;
-  color: black;
+  padding-right: 5rem;
+  color: #000;
   font-size: 1rem;
-  padding-right: 4rem;
 }
 
 .explore-menu-list h2 {
-  margin-top: 1rem;
+  margin-top: 0.6rem;
+  padding-right: 5rem; 
   font-size: 0.95rem;
   color: gray;
-  padding-right: 4rem;
 }
 
 .explore-menu-list .menu {
   color: #f77f00;
-  margin-left: 0.2rem;
   font-weight: 600;
+  margin-left: 0.2rem;
 }
-
-
 
 
 
