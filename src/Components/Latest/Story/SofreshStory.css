@@ -1,0 +1,86 @@
+.sofreshstory {
+  position: relative;
+  background-color: #fffaf2;
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+  width: 100vw;  
+  margin-left: calc(50% - 50vw); 
+  margin-right: calc(50% - 50vw); 
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  overflow: hidden;
+   top: 0; left: 0; right: 0; bottom: 0;
+ /* background-image: url('/src/assets/sofresh_bg.jpg');*/
+  background-color: #e17c00;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 1; /* Adjust this for how faded you want it! */
+  z-index: 1;
+}
+
+.sofreshstory-container {
+  position: relative;
+  z-index: 2; /* content above background image */
+}
+
+
+.sofreshstory-container {
+
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px; 
+
+}
+
+.sofreshstory-text {
+  flex: 1;
+  min-width: 30px;
+}
+
+.sofreshstory-text h1 {
+  font-size: 2.5rem;
+  color: #e17c00;
+  margin-bottom: 30px; 
+}
+
+.sofreshstory-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #fff;
+  margin-bottom: 10px; 
+}
+
+.sofreshstory-text .btn {
+  background-color: #fff;
+  color: #e17c00;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 26px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sofreshstory-text .btn:hover {
+  background-color: green;
+}
+
+.sofreshstory-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.sofreshstory-image img {
+  width: 100%;
+  max-width: 680px;
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+

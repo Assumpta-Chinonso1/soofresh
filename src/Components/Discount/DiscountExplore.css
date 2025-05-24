@@ -1,0 +1,60 @@
+.discount-explore {
+  background: linear-gradient(to right, #e7e8e9, #fdfdff);
+  padding: 60px 20px;
+  font-family: 'Poppins', sans-serif;
+ 
+}
+
+
+.discount-explore-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 30px;
+}
+
+.discount-text {
+  flex: 1;
+  max-width: 550px;
+}
+
+.discount-text h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.discount-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.discount-text h3 {
+  font-size: 16px;
+  color: #4caf50; 
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.discount-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.discount-image img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+}
+
+
+
+
+

@@ -16,12 +16,16 @@ import behind_s from './behind the scene.jpeg'
 import healthy_ind from './healthy indugencies.jpeg'
 import feeling_tired from './feeling tired all time.jpeg'
 import theso_frsh from './the so frsh.webp'
-import  facebook from './facebook.png'
-import twitter from  './twitter.png'
-import instagram from './instagram.png'
+import  facebook from './green_facebook.png'
+import twitter from  './green_twitter.png'
+import instagram from './green_insta.png'
 import sofresh_ba from './sofreshbackground.jpeg'
 import arrow_o from './arrow-orage.png'
 import arrow_g from './arrow-green.png'
+import fb_or from './facebook_orange.png'
+import twit_or from './twitter_orange.png'
+import ig_or from './instagram_orange.png'
+
 
 export const assets = {
     search_icon,
@@ -47,7 +51,10 @@ export const assets = {
     instagram,
     sofresh_ba,
     arrow_g,
-    arrow_o
+    arrow_o,
+    fb_or,
+    twit_or,
+    ig_or
 }
 
 
@@ -115,4 +122,28 @@ export const menu_lists = [
             menu_image: assets.warm_b,
             menu_price: "₦5,000.00",
          },
+]
+
+
+export const menu_more = [
+    {
+            menu_name: "Behind the Scenes: How We Make...",
+            menu_image: assets.behind_s,
+            menu_des: "Ever wonder what happens behind the scenes before your meal arrives at your doorstep or is ready for pick-up?",
+            menu_date: "21, April 2025",
+         },
+   
+      {
+               menu_name: "Healthy Indulgences: Treat Yourself...",
+               menu_image: assets.healthy_ind,
+               menu_des: "Let’s be honest: we all crave something sweet from time to time. After a long day, when the...",
+               menu_date: "14, April 2025",
+            },
+   
+            {
+               menu_name: "Feeling Tired All the Time? Try...",
+               menu_image: assets.feeling_tired,
+               menu_des: "You know that feeling, when you’ve had a full night’s sleep, but you still wake up drained?",
+                 menu_date: "10, April 2025",
+            },
 ]
